@@ -1,4 +1,4 @@
-print("Démarrage RiskLens...")
+print("Démarrage Modélisation Réassurance...")
 
 from server import app
 from config import GLOBAL_CSS
@@ -7,13 +7,13 @@ from pages.modelling import PAGE_MODELISATION
 from pages.reinsurance import PAGE_REASSURANCE
 from dash import html, dcc
 
-app.title = "RiskLens — Modélisation & Réassurance"
+app.title = "Modélisation Réassurance"
 
 app.index_string = '''<!DOCTYPE html>
 <html>
     <head>
         {%metas%}
-        <title>RiskLens</title>
+        <title>Modélisation Réassurance</title>
         {%favicon%}
         {%css%}
         <style>
@@ -61,5 +61,5 @@ import callbacks.modelling
 import callbacks.reinsurance
 
 if __name__ == '__main__':
-    print("Lancement sur http://127.0.0.1:8050")
+    print("Lancement sur http://127.0.0.1:8050")  # noqa
     app.run(debug=True, port=8050)
